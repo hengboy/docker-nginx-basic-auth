@@ -53,6 +53,13 @@ docker run -d --link web:web --name auth \
 
 results in 2 users (`hengboy:bar` and `test:test`).
 
+## Deploy
+
+```bash
+# build docker images, work in base dir
+docker buildx build --platform linux/arm64,linux/amd64 -t hengboy/nginx-basic-auth . --push
+```
+
 ## Troubleshooting
 
 ```
